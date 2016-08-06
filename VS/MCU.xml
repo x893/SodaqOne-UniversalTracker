@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ToolchainID>a8363599-7984-4e66-b6dc-38c2831acfdd</ToolchainID>
+  <BspID>com.visualgdb.bsp.in-place</BspID>
+  <MCUProperties>
+    <Entries />
+  </MCUProperties>
+  <BSPSourceFolderName>Device-specific files</BSPSourceFolderName>
+  <InPlaceMCU>
+    <CompilationFlags>
+      <PreprocessorMacros>
+        <string>F_CPU=48000000L</string>
+        <string>ARDUINO=10610</string>
+        <string>ARDUINO_SODAQ_ONE</string>
+        <string>ARDUINO_ARCH_SAMD</string>
+        <string>__SAMD21G18A__</string>
+        <string>USB_VID=0x2341</string>
+        <string>USB_PID=0x804d</string>
+        <string>USBCON</string>
+      </PreprocessorMacros>
+      <IncludeDirectories>
+        <string>../Arduino/tools/CMSIS/4.0.0-atmel/CMSIS/Include</string>
+        <string>../Arduino/tools/CMSIS/4.0.0-atmel/Device/ATMEL</string>
+        <string>../Arduino/hardware/samd/1.6.8/cores/arduino</string>
+        <string>../Arduino/hardware/samd/1.6.8/variants/sodaq_one</string>
+        <string>../Arduino/hardware/samd/1.6.8/libraries/Wire</string>
+      </IncludeDirectories>
+      <CFLAGS>-mcpu=cortex-m0plus -mthumb -c -g -Os -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -MMD</CFLAGS>
+      <CXXFLAGS>-mcpu=cortex-m0plus -mthumb -c -g -Os -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -MMD</CXXFLAGS>
+      <LDFLAGS>-Os -Wl,--gc-sections -save-temps --specs=nano.specs --specs=nosys.specs -mcpu=cortex-m0plus -mthumb -Wl,--check-sections -Wl,--gc-sections -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align -T../Arduino/hardware/samd/1.6.8/variants/sodaq_one/linker_scripts/gcc/flash_with_bootloader.ld</LDFLAGS>
+      <ASFLAGS>-mcpu=cortex-m0plus -mthumb -c -g -Os -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -MMD</ASFLAGS>
+      <COMMONFLAGS>-DUSB_MANUFACTURER="\"SODAQ\"" -DUSB_PRODUCT="\"SODAQ-ONE\""</COMMONFLAGS>
+      <EnableLinkerGroups>true</EnableLinkerGroups>
+    </CompilationFlags>
+    <AdditionalSourceFiles />
+    <FLASHSize>0</FLASHSize>
+    <RAMSize>0</RAMSize>
+    <FLASHBase>4294967295</FLASHBase>
+    <RAMBase>4294967295</RAMBase>
+  </InPlaceMCU>
+</EmbeddedProfile>

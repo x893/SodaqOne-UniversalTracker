@@ -1,5 +1,12 @@
 # SODAQ ONE Tracker specs
 
+Add VisualGDB project, change paths for 
+
+arm-none-eabi: C:\Tools\GnuARM\4.9
+
+jlink: C:\Tools\SEGGER\JLink_V600e
+
+
 Note: to be able to compile this application you need to add the right board file to your Arduino IDE.
 
 Go to File, Preferences and set the following URL for the additional board files:

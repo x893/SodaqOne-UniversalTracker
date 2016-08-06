@@ -23,3 +23,10 @@ Debug/
 
 # Other temp files
 *.bak
+CodeDB/
+obj/
+VisualGDBCache/
+*.sdf
+*.old
+*.suo
+-.d
