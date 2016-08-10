@@ -63,7 +63,7 @@ void UBlox::enable () {
     this->reset();
 #if defined(ARDUINO_SODAQ_LORAONE) || defined(ARDUINO_SODAQ_ONE)
     digitalWrite(GPS_ENABLE, 1);
-    db_printf("uBlox enabled\n");
+    db_printf("uBlox enabled\r\n");
 #endif
 }
 
@@ -71,7 +71,7 @@ void UBlox::disable () {
     this->reset();
 #if defined(ARDUINO_SODAQ_LORAONE) || defined(ARDUINO_SODAQ_ONE)
     digitalWrite(GPS_ENABLE, 0);
-    db_printf("uBlox disabled\n");
+    // db_printf("uBlox disabled\r\n");
 #endif
 }
 
@@ -126,7 +126,7 @@ int UBlox::process(uint8_t c) {
         ck_a += c; ck_b += ck_a;
         state_ = 4;
         Id_ |= (uint16_t) c;
-        // db_printf("Id=%4.4x\n",Id);
+        // db_printf("Id=%4.4x\r\n",Id);
     }
     else if (state_ == 4) {
         ck_a += c; ck_b += ck_a;
@@ -162,7 +162,7 @@ int UBlox::process(uint8_t c) {
         if (ck_b == c) {
             if (Id_ == 0x0501 || Id_ == 0x500) {
                 AckedId_ = (AckedId_ >> 8) | (AckedId_ << 8);  // Change Endianess
-                // db_printf("Id=%4.4x Ack=%4.4x\n",Id,AckedId);
+                // db_printf("Id=%4.4x Ack=%4.4\r\n",Id,AckedId);
             }
             return Id_;
         }
@@ -196,7 +196,7 @@ void UBlox::dispatchMessage(int id) {
                     this->funcNavPvt(
                             (NavigationPositionVelocityTimeSolution*) payLoad_.buffer);
                 else
-                    db_printf("Oops %d %d\n",payLoad_.length,sizeof(NavigationPositionVelocityTimeSolution));
+                    db_printf("Oops %d %d\r\n",payLoad_.length,sizeof(NavigationPositionVelocityTimeSolution));
             }
             break;
         default:
@@ -207,7 +207,7 @@ void UBlox::dispatchMessage(int id) {
 }
 
 void UBlox::GetPeriodic (int bytes) {
-    this->db_printf("%d bytes available\n",bytes);
+    this->db_printf("%d bytes available\r\n",bytes);
     if (bytes) {
         do {
             uint8_t read;       // Holds actual read
@@ -246,7 +246,7 @@ int UBlox::send(uint8_t *buffer,int n) {
 void UBlox::sendraw() {
     (void) this->send(payLoad_.buffer,payLoad_.length);
     int id = this->wait();
-    this->db_printf("UBlox::sendraw() == %4.4x\n",id);
+    this->db_printf("UBlox::sendraw() == %4.4x\r\n",id);
 }
 
 void UBlox::CfgMsg(uint16_t Msg,uint8_t rate) {
@@ -361,7 +361,7 @@ bool UBlox::wait(uint16_t rid,int reqLength,void *d) {
                         found = true;
                     }
                     else
-                        db_printf("Oops %d %d\n",payLoad_.length,reqLength);
+                        db_printf("Oops %d %d\r\n",payLoad_.length,reqLength);
                 }
                 else if (pid > 0)
                 	this->dispatchMessage(pid);

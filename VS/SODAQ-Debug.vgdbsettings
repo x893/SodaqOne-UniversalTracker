@@ -87,7 +87,7 @@
         </KeyValue>
         <KeyValue>
           <Key>com.sysprogs.jlink.speed</Key>
-          <Value>1000</Value>
+          <Value>5000</Value>
         </KeyValue>
         <KeyValue>
           <Key>com.sysprogs.jlink.resetcommand</Key>
@@ -95,7 +95,7 @@
         </KeyValue>
         <KeyValue>
           <Key>com.sysprogs.jlink.resetafterload</Key>
-          <Value />
+          <Value>mon reset</Value>
         </KeyValue>
         <KeyValue>
           <Key>com.sysprogs.jlink.program</Key>
@@ -103,7 +103,7 @@
         </KeyValue>
         <KeyValue>
           <Key>com.sysprogs.jlink.autoprogram</Key>
-          <Value />
+          <Value>1</Value>
         </KeyValue>
       </Entries>
     </DebugMethodProperties>
