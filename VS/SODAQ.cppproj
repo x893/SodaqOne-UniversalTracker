@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATSAMD21G18A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>SODAQ</AssemblyName>
+    <Name>SODAQ</Name>
+    <RootNamespace>SODAQ</RootNamespace>
+    <ToolchainFlavour>Arduino</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.32.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.samice</avrtool>
+    <avrtoolserialnumber>480003177</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x10010005</avrdeviceexpectedsignature>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <com_atmel_avrdbg_tool_samice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>4000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+        <JlinkConfigFile>E:\uProjects\LORA\SodaqOne-UniversalTracker\VS\jlink.config</JlinkConfigFile>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.samice</ToolType>
+      <ToolNumber>480003177</ToolNumber>
+      <ToolName>J-Link</ToolName>
+    </com_atmel_avrdbg_tool_samice>
+    <avrtoolinterfaceclock>4000000</avrtoolinterfaceclock>
+    <UseGdbCustomPath>False</UseGdbCustomPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.DefaultIncludePath>False</armgcc.compiler.directories.DefaultIncludePath>
+        <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.DefaultIncludePath>False</armgcccpp.compiler.directories.DefaultIncludePath>
+        <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+        <armgcccpp.linker.general.UseNewlibNano>True</armgcccpp.linker.general.UseNewlibNano>
+        <armgcccpp.linker.general.AdditionalSpecs>Use syscall stubs (--specs=nosys.specs)</armgcccpp.linker.general.AdditionalSpecs>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.memorysettings.ExternalRAM />
+        <armgcccpp.linker.miscellaneous.LinkerFlags>-T../../Arduino/hardware/samd/1.6.8/variants/sodaq_one/linker_scripts/gcc/flash_with_bootloader.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.preprocessingassembler.general.DefaultIncludePath>False</armgcccpp.preprocessingassembler.general.DefaultIncludePath>
+      </ArmGccCpp>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>False</UsesExternalMakeFile>
+    <OutputDirectory>
+    </OutputDirectory>
+    <BuildTarget>all</BuildTarget>
+    <CleanTarget>clean</CleanTarget>
+    <ExternalMakeFilePath>E:\uProjects\LORA\SodaqOne-UniversalTracker\VS\Makefile</ExternalMakeFilePath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>False</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>False</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>False</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>False</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>False</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=48000000L</Value>
+            <Value>ARDUINO=10610</Value>
+            <Value>ARDUINO_SODAQ_ONE</Value>
+            <Value>ARDUINO_ARCH_SAMD</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x804d</Value>
+            <Value>USBCON</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.DefaultIncludePath>False</armgcc.compiler.directories.DefaultIncludePath>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\SodaqOneTracker</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\hardware\samd\1.6.8\cores\arduino</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\hardware\samd\1.6.8\variants\sodaq_one</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\hardware\samd\1.6.8\libraries\Wire</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\tools\CMSIS\4.0.0-atmel\CMSIS\Include</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\tools\CMSIS\4.0.0-atmel\Device\ATMEL</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcc.compiler.optimization.EnableLongCalls>False</armgcc.compiler.optimization.EnableLongCalls>
+        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+        <armgcc.compiler.warnings.ExtraWarnings>True</armgcc.compiler.warnings.ExtraWarnings>
+        <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu11 -nostdlib</armgcc.compiler.miscellaneous.OtherFlags>
+        <armgcc.compiler.miscellaneous.Verbose>True</armgcc.compiler.miscellaneous.Verbose>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=48000000L</Value>
+            <Value>ARDUINO=10610</Value>
+            <Value>ARDUINO_SODAQ_ONE</Value>
+            <Value>ARDUINO_ARCH_SAMD</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x804d</Value>
+            <Value>USBCON</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.DefaultIncludePath>False</armgcccpp.compiler.directories.DefaultIncludePath>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\SodaqOneTracker</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\hardware\samd\1.6.8\cores\arduino</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\hardware\samd\1.6.8\variants\sodaq_one</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\hardware\samd\1.6.8\libraries\Wire</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\tools\CMSIS\4.0.0-atmel\CMSIS\Include</Value>
+            <Value>E:\uProjects\LORA\SodaqOne-UniversalTracker\Arduino\tools\CMSIS\4.0.0-atmel\Device\ATMEL</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcccpp.compiler.optimization.EnableLongCalls>False</armgcccpp.compiler.optimization.EnableLongCalls>
+        <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.warnings.ExtraWarnings>True</armgcccpp.compiler.warnings.ExtraWarnings>
+        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11 -nostdlib</armgcccpp.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.compiler.miscellaneous.Verbose>True</armgcccpp.compiler.miscellaneous.Verbose>
+        <armgcccpp.linker.general.UseNewlibNano>True</armgcccpp.linker.general.UseNewlibNano>
+        <armgcccpp.linker.general.AdditionalSpecs>Use syscall stubs (--specs=nosys.specs)</armgcccpp.linker.general.AdditionalSpecs>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.memorysettings.ExternalRAM />
+        <armgcccpp.linker.miscellaneous.LinkerFlags>-T../../Arduino/hardware/samd/1.6.8/variants/sodaq_one/linker_scripts/gcc/flash_with_bootloader.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+        <armgcccpp.preprocessingassembler.general.DefaultIncludePath>False</armgcccpp.preprocessingassembler.general.DefaultIncludePath>
+        <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+      </ArmGccCpp>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>True</UsesExternalMakeFile>
+    <OutputDirectory>E:\uProjects\LORA\SodaqOne-UniversalTracker\VS</OutputDirectory>
+    <BuildTarget>all</BuildTarget>
+    <CleanTarget>clean</CleanTarget>
+    <ExternalMakeFilePath>E:\uProjects\LORA\SodaqOne-UniversalTracker\VS\Makefile</ExternalMakeFilePath>
+    <PostBuildEvent>copy $(OutputDirectory)\Debug\$(OutputFileName)$(OutputFileExtension) $(OutputDirectory)\$(OutputFileName)$(OutputFileExtension)</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\abi.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\abi.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\avr\dtostrf.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino-avr\dtostrf.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\cortex_handlers.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\cortex_handlers.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\delay.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\delay.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\hooks.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\hooks.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\IPAddress.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\IPAddress.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\itoa.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\itoa.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\main.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\main.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\new.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\new.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\Print.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\Print.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\pulse.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\pulse.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\pulse_asm.S">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\pulse_asm.S</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\Reset.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\Reset.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\RingBuffer.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\RingBuffer.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\SERCOM.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\SERCOM.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\startup.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\startup.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\Stream.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\Stream.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\Tone.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\Tone.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\Uart.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\Uart.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\USB\CDC.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino-usb\CDC.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\USB\PluggableUSB.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino-usb\PluggableUSB.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\USB\samd21_host.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino-usb\samd21_host.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\USB\USBCore.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino-usb\USBCore.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\WInterrupts.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\WInterrupts.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\wiring.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\wiring.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\wiring_analog.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\wiring_analog.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\wiring_digital.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\wiring_digital.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\wiring_private.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\wiring_private.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\wiring_shift.c">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\wiring_shift.c</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\WMath.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\WMath.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\cores\arduino\WString.cpp">
+      <SubType>compile</SubType>
+      <Link>cores-arduino\WString.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\libraries\Wire\Wire.cpp">
+      <SubType>compile</SubType>
+      <Link>libraries-Wire\Wire.cpp</Link>
+    </Compile>
+    <Compile Include="..\Arduino\hardware\samd\1.6.8\variants\sodaq_one\variant.cpp">
+      <SubType>compile</SubType>
+      <Link>variants-sodaq_one\variant.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\DataRecord.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\DataRecord.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\FlashStorage.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\FlashStorage.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\BootMenu.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\BootMenu.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\Command.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\Command.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\Config.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\Config.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\GpsFixDataRecord.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\GpsFixDataRecord.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\GpsFixLiFoRingBuffer.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\GpsFixLiFoRingBuffer.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\LSM303.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\LSM303.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\MyTime.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\MyTime.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\OverTheAirConfigDataRecord.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\OverTheAirConfigDataRecord.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\ReportDataRecord.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\ReportDataRecord.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\RTCTimer.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\RTCTimer.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\RTCZero.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\RTCZero.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\Sodaq_RN2483.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\Sodaq_RN2483.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\Sodaq_wdt.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\Sodaq_wdt.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\Switchable_Device.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\Switchable_Device.cpp</Link>
+    </Compile>
+    <Compile Include="..\SodaqOneTracker\ublox.cpp">
+      <SubType>compile</SubType>
+      <Link>SodaqOneTracker\ublox.cpp</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cores-arduino" />
+    <Folder Include="cores-arduino-avr" />
+    <Folder Include="cores-arduino-usb" />
+    <Folder Include="libraries-Wire" />
+    <Folder Include="SodaqOneTracker" />
+    <Folder Include="variants-sodaq_one" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SodaqOneTracker\SodaqOneTracker.ino">
+      <SubType>compile</SubType>
+      <Link>VS\SodaqOneTracker\SodaqOneTracker.ino</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

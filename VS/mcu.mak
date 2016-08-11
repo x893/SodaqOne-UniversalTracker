@@ -5,7 +5,7 @@
 
 #VisualGDB provides BSP_ROOT and TOOLCHAIN_ROOT via environment when running Make. The line below will only be active if GNU Make is started manually.
 BSP_ROOT ?= C:/Users/Mitek/AppData/Local/Arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1
-TOOLCHAIN_ROOT ?= C:/Tools/GnuARM/4.9
+TOOLCHAIN_ROOT ?= C:/Users/Mitek/AppData/Local/Arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1
 
 #Embedded toolchain
 CC := $(TOOLCHAIN_ROOT)/bin/arm-none-eabi-gcc.exe
@@ -16,7 +16,7 @@ OBJCOPY := $(TOOLCHAIN_ROOT)/bin/arm-none-eabi-objcopy.exe
 
 #Additional flags
 PREPROCESSOR_MACROS += F_CPU=48000000L ARDUINO=10610 ARDUINO_SODAQ_ONE ARDUINO_ARCH_SAMD __SAMD21G18A__ USB_VID=0x2341 USB_PID=0x804d USBCON
-INCLUDE_DIRS += ../Arduino/tools/CMSIS/4.0.0-atmel/CMSIS/Include ../Arduino/tools/CMSIS/4.0.0-atmel/Device/ATMEL ../Arduino/hardware/samd/1.6.8/cores/arduino ../Arduino/hardware/samd/1.6.8/variants/sodaq_one ../Arduino/hardware/samd/1.6.8/libraries/Wire
+INCLUDE_DIRS += ../Arduino/tools/CMSIS/4.0.0-atmel/CMSIS/Include ../Arduino/tools/CMSIS/4.0.0-atmel/Device/ATMEL E:/uProjects/LORA/SodaqOne-UniversalTracker/SodaqOneTracker ../Arduino/hardware/samd/1.6.8/cores/arduino ../Arduino/hardware/samd/1.6.8/variants/sodaq_one ../Arduino/hardware/samd/1.6.8/libraries/Wire
 LIBRARY_DIRS += 
 LIBRARY_NAMES += 
 ADDITIONAL_LINKER_INPUTS += 

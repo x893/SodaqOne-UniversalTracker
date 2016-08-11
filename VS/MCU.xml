@@ -21,6 +21,7 @@
       <IncludeDirectories>
         <string>../Arduino/tools/CMSIS/4.0.0-atmel/CMSIS/Include</string>
         <string>../Arduino/tools/CMSIS/4.0.0-atmel/Device/ATMEL</string>
+        <string>E:/uProjects/LORA/SodaqOne-UniversalTracker/SodaqOneTracker</string>
         <string>../Arduino/hardware/samd/1.6.8/cores/arduino</string>
         <string>../Arduino/hardware/samd/1.6.8/variants/sodaq_one</string>
         <string>../Arduino/hardware/samd/1.6.8/libraries/Wire</string>

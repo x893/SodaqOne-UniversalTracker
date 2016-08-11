@@ -1052,6 +1052,7 @@
 // --- Include directories begin --- //
 //../Arduino/tools/CMSIS/4.0.0-atmel/CMSIS/Include
 //../Arduino/tools/CMSIS/4.0.0-atmel/Device/ATMEL
+//E:/uProjects/LORA/SodaqOne-UniversalTracker/SodaqOneTracker
 //../Arduino/hardware/samd/1.6.8/cores/arduino
 //../Arduino/hardware/samd/1.6.8/variants/sodaq_one
 //../Arduino/hardware/samd/1.6.8/libraries/Wire
